@@ -3,7 +3,7 @@ import psutil
 #by python_genius
 #cores 
 print("Physical core:", psutil.cpu_count(logical=False))
-print("Total core:", psutil.cpu_count(logical=False))
+print("Total core:", psutil.cpu_count(logical=True))
 
 #Frequence
 cpufreq = psutil.cpu_freq()
