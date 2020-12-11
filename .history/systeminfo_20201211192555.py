@@ -1,16 +1,15 @@
 import psutil
 from datetime import datetime
 
-#By izaias de oliveira elias
-#Fonte de pesquisa-0 (https://pypi.org/project/psutil/)
-#Fonte de pesquisa-1 (https://psutil.readthedocs.io/en/latest/)
-
-#Head
 x = datetime.now()
 dias = ('Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo')
 print('\n'"Hoje é", dias[x.weekday()])
 print("Data",x.day,"/", x.month,"/", x.year)
 print("Horas",x.hour ,":",x.minute,":",x.second, '\n')
+
+#By izaias de oliveira elias
+#Fonte de pesquisa(https://pypi.org/project/psutil/)
+#Fonte de pesquisa-2 https://psutil.readthedocs.io/en/latest/
 
 #Cpu
 cpu_count = psutil.cpu_count()
@@ -29,11 +28,13 @@ swap = psutil.swap_memory()
 
 #Disck
 disck = psutil.disk_partitions()
-disck_io = psutil.disk_io_counters(perdisk=True)
 disck_usage = psutil.disk_usage('/')
 
 #Users
 users = psutil.users()
+
+#Time
+time_usage = psutil.boot_time()
 
 #Network
 net = psutil.net_io_counters(pernic=True)
@@ -41,10 +42,6 @@ conect = psutil.net_connections()
 adress_if = psutil.net_if_addrs()
 stats_net = psutil.net_if_stats()
 
-#Time
-time_usage = psutil.boot_time()
-
-#Output
 print("Cores:", cpu_count,'\n')
 print("Frequence:", cpu_freq,'\n')
 print("Usage percent:", cpu_percent,'%''\n')
@@ -55,7 +52,6 @@ print("Temperature", temp,'c°' '\n')
 print("Memory", mem,'\n')
 print("Memory swap", swap,'\n')
 print("Disck mount point", disck,'\n')
-print("Disck io", disck_io,'\n')
 print("Disck usage", disck_usage,'\n')
 print("Users", users,'\n')
 print("Time online", time_usage,'\n')

@@ -44,7 +44,7 @@ stats_net = psutil.net_if_stats()
 #Time
 time_usage = psutil.boot_time()
 
-#Output
+#Outpu
 print("Cores:", cpu_count,'\n')
 print("Frequence:", cpu_freq,'\n')
 print("Usage percent:", cpu_percent,'%''\n')

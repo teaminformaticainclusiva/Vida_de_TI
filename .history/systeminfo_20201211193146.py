@@ -35,16 +35,15 @@ disck_usage = psutil.disk_usage('/')
 #Users
 users = psutil.users()
 
+#Time
+time_usage = psutil.boot_time()
+
 #Network
 net = psutil.net_io_counters(pernic=True)
 conect = psutil.net_connections()
 adress_if = psutil.net_if_addrs()
 stats_net = psutil.net_if_stats()
 
-#Time
-time_usage = psutil.boot_time()
-
-#Output
 print("Cores:", cpu_count,'\n')
 print("Frequence:", cpu_freq,'\n')
 print("Usage percent:", cpu_percent,'%''\n')
@@ -55,7 +54,7 @@ print("Temperature", temp,'c°' '\n')
 print("Memory", mem,'\n')
 print("Memory swap", swap,'\n')
 print("Disck mount point", disck,'\n')
-print("Disck io", disck_io,'\n')
+print("Di")
 print("Disck usage", disck_usage,'\n')
 print("Users", users,'\n')
 print("Time online", time_usage,'\n')
